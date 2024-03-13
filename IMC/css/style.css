@@ -1,0 +1,38 @@
+body{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.entrada{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: white;
+    padding: 2%;
+    margin-bottom: 2%;
+    font-size: 130%;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 330px;
+}
+
+.saida{
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 2%;
+    background-color: white;
+    padding: 1%;
+    border-radius: 10px;
+    width: 350px;
+    height: 50px;
+}
+
+select{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+button{
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: 150%;
+}

@@ -42,7 +42,7 @@ function lampdls(){ //desliga a lampada
 
 lampada.addEventListener('mouseleave', lampdls)
 
-function estlamp(){
+function estlamp(){ //verifica se a lampada está ligada
 
     return lampada.src.indexOf('desligada') > -1
 
