@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JQuery Validation</title>		
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="js/additional-methods.min.js"></script>
+		<script type="text/javascript" src="js/localization/messages_pt_BR.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#formulario").validate({
+
+					rules:{
+
+						nome: {
+							required: true,
+							maxlength: 40,
+							minlength: 10,
+							minWords: 2
+						},
+
+						email: {
+							required: true,
+							email: true
+						},
+
+						cidade: {
+							required: true
+						},
+
+						idade: {
+							required: true,
+							min: 7,
+							max: 120
+						},
+						telefone:{
+							required: true,
+							maxlength: 12,
+							minlength: 11,
+						},
+						cpf:{
+							required: true,
+							min: 5,
+						},
+						rg:{
+							required: true,
+							maxlength: 11,
+							minlength: 10,
+						},
+
+					},
+					submitHandler: function(form){
+						alert("Formulário enviado")						
+					}
+				})
+			})
+
+		</script>
+	</head>
+
+	<body>
+
+		<div class="container">
+
+			<h1>Formulários com JQuery</h1>
+
+			<form name="formulario" id="formulario" method="post">
+
+				<div class="row">
+					<label>Nome Completo</label>
+					<input type="text" name="nome" id="nome" class="form-control" />
+				</div>
+
+				<div class="row">
+					<label>E-mail</label>
+					<input type="email" name="email" id="email" class="form-control" />
+				</div>		
+
+				<div class="row">
+					<label>Cidade</label>
+					<select name="cidade" id="cidade" class="form-control">
+						<option value="">----</option>
+						<option value="Ribeirão Pires">Ribeirão Pires</option>
+						<option value="Rio Grande">Rio Grande</option>
+						<option value="Maua">Mauá</option>
+						<option value="Santo Andre">Santo André</option>
+						<option value="Sao Bernardo do Campo">São Bernardo do Campo</option>
+						<option value="Diadema">Diadema</option>
+						<option value=" Sao Caetano do Sul"> São Caetano do Sul</option>
+					</select>
+				</div>
+
+				<div class="row">
+					<label>Idade</label>
+					<input type="number" name="idade" id="idade" class="form-control" />
+				</div>
+
+				<div class="row">
+					<label>Telefone (11 12345-6789)</label>
+					<input type="text" name="telefone" id="telefone" class="form-control" />
+				</div>
+
+				<div class="row">
+					<label>CPF</label>
+					<input type="text" name="cpf" id="cpf" class="form-control" />
+				</div>
+
+				<div class="row">
+					<label>RG</label>
+					<input type="text" name="rg" id="rg" class="form-control" />
+				</div>
+
+				<div class="row">
+					<input type="submit" name="enviar" id="enviar" class="btn btn-primary form-control" />
+				</div>
+
+			</form>
+
+		</div>
+
+	</body>
+
+</html>
