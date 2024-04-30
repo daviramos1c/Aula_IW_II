@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    position: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.tela{
+    width: 90%;
+    height: 500px;
+    border: 1px solid black;
+    border-bottom: solid rgb(61, 255, 61) 20px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(102, 181, 255), white)
+}
+
+.cano{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: canomexendo 2s infinite linear;
+}
+
+@keyframes canomexendo {
+    from {
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+
+@keyframes nuvemmexendo {
+    from {
+        right: -550px;
+    }
+
+    to{
+        right: 100%;
+    }
+    
+}
+
+.mario{
+    width: 150px;
+    bottom: 0;
+    position: absolute;
+}
+
+.pular{
+    animation: pulo 0.5s ease-out;
+}
+
+@keyframes pulo {
+    from{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 200px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    to{
+        bottom: 0;
+    }
+
+}
+
+.nuvem{
+    position: absolute;
+    width: 550px;
+    animation: nuvemmexendo 10s infinite linear;
+}
